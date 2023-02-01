@@ -1,10 +1,8 @@
-import { useContext } from "react";
 import ProductListItem from "./ProductListItem";
-import { ShoppingContext } from "./context/ShoppingContext";
+import { useSelector } from "react-redux";
 
 export default function ProductList() {
-    const {products}=useContext(ShoppingContext)
-
+    const {products} = useSelector(state=>state.product)
   return (
     <div className="row my-4">
         {
